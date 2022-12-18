@@ -6,7 +6,7 @@ const NavbarComponent = () => {
     <Navbar expand="sm">
       <Navbar.Brand href="/">Komersiyo</Navbar.Brand>
       <Navbar.Toggle />
-      <Navbar.Collapse>
+      <Navbar.Collapse className="justify-content-end">
         <Button>Cart 0 Items</Button>
       </Navbar.Collapse>
     </Navbar>
