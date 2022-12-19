@@ -13,8 +13,21 @@ const CartContext = createContext({
 export function CartProvider({ children }) {
   const [cartProducts, setCartProducts] = useState([]);
 
+  // [{ id: 1, quantity: 2}]
+
+  function getProductQuantity(id) {
+    cartProducts.find((product) => product.id === id)?.quantity;
+    // undefined.quantity;
+
+    if (quantity === undefined) {
+      return 0;
+    }
+
+    return quantity;
+  }
+
   const contextValue = {
-    items: [],
+    items: [cartProducts],
     getProductQuantity,
     addOneToCart,
     removeOneFromCart,
