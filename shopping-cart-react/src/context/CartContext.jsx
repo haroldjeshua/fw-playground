@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { productsArray, getProductData } from "../productStore";
 
-const CartContext = createContext({
+export const CartContext = createContext({
   items: [],
   getProductQuantity: () => {},
   addOneToCart: () => {},
@@ -16,7 +16,9 @@ export function CartProvider({ children }) {
   // [{ id: 1, quantity: 2}]
 
   function getProductQuantity(id) {
-    cartProducts.find((product) => product.id === id)?.quantity;
+    const quantity = cartProducts.find(
+      (product) => product.id === id
+    )?.quantity;
     // undefined.quantity;
 
     if (quantity === undefined) {
@@ -97,7 +99,9 @@ export function CartProvider({ children }) {
     getTotalCost,
   };
 
-  return <CartProvider value={contextValue}>{children}</CartProvider>;
+  return (
+    <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
+  );
 }
 
 export default CartProvider;
