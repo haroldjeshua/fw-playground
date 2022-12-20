@@ -49,6 +49,17 @@ export function CartProvider({ children }) {
     }
   }
 
+  function deleteFromCart(id) {
+    // filter: [] if an object meets a condition, add the object
+    // [product1, product2, product3]
+    // [product1, product3]
+    setCartProducts((cartProducts) =>
+      cartProducts.filter((currentProduct) => {
+        return currentProduct.id != id;
+      })
+    );
+  }
+
   const contextValue = {
     items: cartProducts,
     getProductQuantity,
