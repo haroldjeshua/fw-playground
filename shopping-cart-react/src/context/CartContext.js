@@ -100,5 +100,7 @@ export function CartProvider({ children }) {
   return <CartProvider value={contextValue}>{children}</CartProvider>;
 }
 
+export default CartProvider;
+
 // Context (cart, addToCart, removeCart)
 // Provider -> gives app access to all the things in your context
