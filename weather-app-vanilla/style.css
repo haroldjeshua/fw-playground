@@ -21,7 +21,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.blurreds {
+.blurred {
   filter: blur(3px);
   overflow: hidden;
 }
