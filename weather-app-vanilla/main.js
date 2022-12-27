@@ -12,7 +12,7 @@ getWeather(52.52, 13.41, "Asia/Bangkok")
 function renderWeather({ current, daily, hourly }) {
   renderCurrentWeather(current);
   renderDailyWeather(daily);
-  // renderHourly(hourly);
+  renderHourly(hourly);
   document.body.classList.remove("blurred");
 }
 
@@ -39,17 +39,36 @@ function renderCurrentWeather(current) {
   // current.currentTemp;
 }
 
-const DAY_FORMATTER = new Intl.DateTimeFormat(undefined, { weekday: "long" });
+const DAY_FORMATTER = new Intl.DateTimeFormat(undefined, { weekday: "short" });
 const dailySection = document.querySelector("[data-day-section]");
 const dayCardTemplate = document.querySelector("#day-card-template");
 
-function renderDailyWeather(days) {
+function renderDailyWeather(daily) {
   dailySection.innerHTML = "";
-  days.forEach((day) => {
+  daily.forEach((day) => {
     const el = dayCardTemplate.content.cloneNode(true);
     setValue("temp", day.maxTemp, { parent: el });
     setValue("date", DAY_FORMATTER.format(day.timestamp), { parent: el });
     el.querySelector("[data-icon]").src = getIconUrl(day.iconCode);
     dailySection.append(el);
+  });
+}
+
+const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, { hour: "numeric" });
+const hourlySection = document.querySelector("[data-hour-section]");
+const hourRowTemplate = document.querySelector("#hour-row-template");
+
+function renderHourly(hourly) {
+  hourlySection.innerHTML = "";
+  hourly.forEach((hour) => {
+    const el = hourRowTemplate.content.cloneNode(true);
+    setValue("temp", hour.temp, { parent: el });
+    setValue("fl-temp", hour.feelsLike, { parent: el });
+    setValue("wind", hour.windSpeed, { parent: el });
+    setValue("precip", hour.precip, { parent: el });
+    setValue("day", DAY_FORMATTER.format(hour.timestamp), { parent: el });
+    setValue("time", HOUR_FORMATTER.format(hour.timestamp), { parent: el });
+    el.querySelector("[data-icon]").src = getIconUrl(hour.iconCode);
+    hourlySection.append(el);
   });
 }
