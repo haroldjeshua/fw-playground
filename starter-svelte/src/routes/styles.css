@@ -15,6 +15,9 @@
 	font-family: var(--font-body);
 	color: var(--color-text);
 
+	--color-dark-075: hsla(0, 0%, 13%, 0.75);
+	--color-light-075: hsla(0, 0%, 87%, 0.75);
+
 	--blur-1: 8px;
 	--blur-2: 16px;
 

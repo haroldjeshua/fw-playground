@@ -6,7 +6,7 @@
     <a class="navbar__link active" href="#home">Home</a>
     <a class="navbar__link" href="#work">Work</a>
     <a class="navbar__link" href="#about">About</a>
-    <a class="navbar__link" href="#media">Media</a>
+    <a class="navbar__link" href="#contact">Contact</a>
 </nav>
 
 <style>
@@ -25,7 +25,7 @@
         justify-content: space-evenly;
         align-items: center;
 
-        background-color: var(--nav-bg);
+        background-color: var(--color-dark-075);
         backdrop-filter: blur(var(--blur-1));
         color: var(--bg);
         border-radius: var(--radii-2);
@@ -45,16 +45,16 @@
         justify-content: center;
         align-items: center;
         height: 100%;
-        color: var(--placeholder);
+        color: var(--color-bg-1);
         transition: all .3s;
     }
 
     .navbar__link:hover {
-        color: var(--bg);
+        color: var(--color-text);
     }
 
     .navbar__link.active {
-        color: var(--bg);
+        color: var(--color-theme-1);
     }
 
     .navbar__link::after {
