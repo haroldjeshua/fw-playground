@@ -47,10 +47,10 @@ function parseCurrentWeather({ current_weather, daily }) {
     currentTemp: Math.round(currentTemp),
     highTemp: Math.round(maxTemp),
     lowTemp: Math.round(minTemp),
-    highFeelsLike: Math.random(maxFeelsLike),
-    lowFeelsLike: Math.random(minFeelsLike),
-    windSpeed: Math.random(windSpeed),
-    precip: Math.random(precip * 100) / 100,
+    highFeelsLike: Math.round(maxFeelsLike),
+    lowFeelsLike: Math.round(minFeelsLike),
+    windSpeed: Math.round(windSpeed),
+    precip: Math.round(precip * 100) / 100,
     iconCode,
   };
 }

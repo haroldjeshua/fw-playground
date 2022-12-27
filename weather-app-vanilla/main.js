@@ -11,12 +11,12 @@ getWeather(52.52, 13.41, "Asia/Bangkok")
 
 function renderWeather({ current, daily, hourly }) {
   renderCurrentWeather(current);
-  // renderDailyWeather(daily);
+  renderDailyWeather(daily);
   // renderHourly(hourly);
   document.body.classList.remove("blurred");
 }
 
-function setValue(selector, value, { parent = document }) {
+function setValue(selector, value, { parent = document } = {}) {
   parent.querySelector(`[data-${selector}]`).textContent = value;
 }
 
@@ -37,4 +37,19 @@ function renderCurrentWeather(current) {
 
   // document.querySelector("[data-current-temp]").textContent =
   // current.currentTemp;
+}
+
+const DAY_FORMATTER = new Intl.DateTimeFormat(undefined, { weekday: "long" });
+const dailySection = document.querySelector("[data-day-section]");
+const dayCardTemplate = document.querySelector("#day-card-template");
+
+function renderDailyWeather(days) {
+  dailySection.innerHTML = "";
+  days.forEach((day) => {
+    const el = dayCardTemplate.content.cloneNode(true);
+    setValue("temp", day.maxTemp, { parent: el });
+    setValue("date", DAY_FORMATTER.format(day.timestamp), { parent: el });
+    el.querySelector("[data-icon]").src = getIconUrl(day.iconCode);
+    dailySection.append(el);
+  });
 }
