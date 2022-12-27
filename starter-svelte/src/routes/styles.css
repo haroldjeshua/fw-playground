@@ -14,6 +14,48 @@
 	--column-margin-top: 4rem;
 	font-family: var(--font-body);
 	color: var(--color-text);
+
+	--blur-1: 8px;
+	--blur-2: 16px;
+
+	--space-1: 8px;
+	--space-2: 16px;
+	--space-3: 24px;
+	--space-4: 32px;
+	--space-5: 40px;
+	--space-6: 48px;
+	--space-7: 56px;
+	--space-8: 64px;
+	--space-9: 72px;
+	--space-10: 80px;
+	--space-11: 88px;
+
+	--radii-1: 4px;
+	--radii-2: 8px;
+	--radii-3: 16px;
+	--radii-4: 32px;
+	--radii-5: 50px;
+	--radii-10: 100px;
+	--radii-round: 50%;
+
+	--width-400: 400px;
+	--width-600: 600px;
+	--width-800: 800px;
+	--width-1000: 1000px;
+	--width-1200: 1200px;
+
+	--mq-mob: 480px;
+	--mq-tab: 768px;
+	--mq-md: 1024px;
+	--mq-lg: 1200px;
+	--mq-xl: 1201px;
+
+	--shadow-soft: 0 20px 25px -5px rgba(0, 0, 0, /0.1), 0 10px 10px -5px rgba(0, 0, 0, /0.04);
+	--shadow-main: 0px 5px 15px -5px rgba(229, 9, 20, 0.749);
+
+	--shadows-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+	--shadows-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+	--shadows-large: 0 30px 60px rgba(0, 0, 0, 0.12);
 }
 
 body {

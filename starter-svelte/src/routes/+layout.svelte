@@ -1,5 +1,6 @@
 <script>
 	import Header from './Header.svelte';
+	import Nav from './Nav.svelte';
 	import './styles.css';
 </script>
 
@@ -10,9 +11,10 @@
 		<slot />
 	</main>
 
-	<footer>
+	<Nav />
+	<!-- <footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+	</footer> -->
 </div>
 
 <style>
