@@ -2,12 +2,26 @@ import "./style.css";
 import { getWeather } from "./weather";
 import { ICON_MAP } from "./iconMap";
 
-getWeather(52.52, 13.41, "Asia/Bangkok")
-  .then(renderWeather)
-  .catch((e) => {
-    console.error(e);
-    alert("Error getting weather");
-  });
+navigator.geolocation.getCurrentPosition(positionSucess, positionError);
+
+function positionSucess({ coords }) {
+  getWeather(
+    coords.latitude,
+    coords.longitude,
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  )
+    .then(renderWeather)
+    .catch((e) => {
+      console.error(e);
+      alert("Error getting weather");
+    });
+}
+
+function positionError(params) {
+  alert(
+    "There was an error getting your location. Please allow us to use your location and refresh the page."
+  );
+}
 
 function renderWeather({ current, daily, hourly }) {
   renderCurrentWeather(current);
