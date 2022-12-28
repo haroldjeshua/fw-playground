@@ -66,7 +66,7 @@
   <h3>Frontend + Design</h3>
   <p>
     A frontend developer with a strong eye for design. Building apps with
-    intuitive intefaces on the web.
+    intuitive interfaces on the web.
   </p>
 </main>
 
