@@ -1,6 +1,5 @@
 <script>
   import { spring } from "svelte/motion";
-  import noise from "./assets/light-noise.png";
   import rain from "./assets/light-rain.png";
 
   let svgSrc;
@@ -71,7 +70,7 @@
   </p>
 </main>
 
-<img src={noise} alt="noise" />
+<img src={rain} alt="noise" />
 
 <svg
   class="bg"
