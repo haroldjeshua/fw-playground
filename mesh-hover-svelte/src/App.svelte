@@ -1,4 +1,25 @@
 <script>
+  import { spring } from "svelte/motion";
+  import noise from "./assets/light-noise.png";
+
+  let svgSrc;
+
+  function screenToSVG({ x: screenX, y: screenY }) {
+    const svg = svgSrc;
+    let p = svg.createSVGPoint();
+    p.x = screenX;
+    p.y = screenY;
+    return p.matrixTransform(svg.getScreenCTM().inverse());
+  }
+
+  let coords = spring(
+    { x: 0, y: 0 },
+    {
+      stiffness: 0.5,
+      damping: 0.7,
+    }
+  );
+
   console.log("testing mesh gradient");
 </script>
 
@@ -6,7 +27,15 @@
   <h1>Blurry Mesh Gradient BG Animation on hover</h1>
 </main>
 
-<svg viewBox="0 0 1512 982" fill="none" xmlns="http://www.w3.org/2000/svg">
+<img src={noise} alt="noise" />
+
+<svg
+  bind:this={svgSrc}
+  on:mousemove={(e) => coords.set(screenToSVG({ x: e.clientX, y: e.clientY }))}
+  viewBox="0 0 1512 982"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
   <g clip-path="url(#clip0_878_1737)">
     <rect width="1512" height="982" fill="#1C1C1C" />
     <g filter="url(#filter0_f_878_1737)">
@@ -19,7 +48,11 @@
       <ellipse cx="983.5" cy="-15.5" rx="332.5" ry="263.5" fill="#8EADD9" />
     </g>
 
-    <g style="mix-blend-mode:color-dodge" filter="url(#filter2_f_878_1737)">
+    <g
+      transform="translate({$coords.x} {$coords.y})"
+      style="mix-blend-mode:color-dodge"
+      filter="url(#filter2_f_878_1737)"
+    >
       <path
         d="M145.315 -7.65351C122.208 154.962 385.107 134.277 519.445 103.607C555.57 82.7502 509.545 -26.117 443.829 -95.7139C378.113 -165.311 548.881 -294.712 484.481 -387.158C420.081 -479.603 174.199 -210.923 145.315 -7.65351Z"
         fill="#F838CD"
@@ -105,25 +138,41 @@
 </svg>
 
 <style>
+  :global(body) {
+    overflow: hidden;
+  }
   main {
     position: relative;
     display: flex;
     z-index: 2;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     align-content: center;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
   }
 
   h1 {
     font-size: clamp(4vw, 2rem, 8vw);
   }
 
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+  }
+
   svg {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
   }
 </style>
