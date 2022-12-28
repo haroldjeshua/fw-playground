@@ -1,6 +1,7 @@
 <script>
   import { spring } from "svelte/motion";
   import noise from "./assets/light-noise.png";
+  import rain from "./assets/light-rain.png";
 
   let svgSrc;
 
