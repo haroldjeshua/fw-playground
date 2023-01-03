@@ -24,4 +24,8 @@ a {
   body {
     @apply flex flex-col items-center justify-center;
   }
+
+  main {
+    @apply grid grid-cols-2 grid-rows-2 gap-4;
+  }
 }
