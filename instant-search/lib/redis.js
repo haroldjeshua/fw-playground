@@ -16,7 +16,7 @@ let schema = new Schema(
     make: { type: "string" },
     model: { type: "string" },
     image: { type: "string" },
-    description: { type: "string", textSearch: true }, // fulltext search
+    description: { type: "text", textSearch: true }, // fulltext search
   },
   {
     dataStructure: "JSON", // document oriented db
