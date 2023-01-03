@@ -42,3 +42,23 @@ export async function createIndex() {
   const repository = client.fetchRepository(schema);
   await repository.createIndex();
 }
+
+export async function searchCards(q) {
+  await connect();
+
+  const repository = client.fetchRepository(schema);
+
+  const cars = await repository
+    .search()
+    .where("make")
+    .eq(q)
+    .or("model")
+    .eq(q)
+    .or("description")
+    .matches(q)
+    .return.all();
+
+  // ^ redisearch: pagination, aggregation,logic ++
+
+  return cars;
+}
