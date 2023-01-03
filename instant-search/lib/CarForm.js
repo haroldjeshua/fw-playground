@@ -16,6 +16,8 @@ const CarForm = () => {
     const formData = Object.fromEntries(form.entries()); // convert form data to object
     // should match redis db schema
 
+    console.log(formData);
+
     const res = await fetch("/api/cars", {
       body: JSON.stringify(formData),
       headers: {

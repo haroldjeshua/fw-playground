@@ -16,7 +16,7 @@ let schema = new Schema(
     make: { type: "string" },
     model: { type: "string" },
     image: { type: "string" },
-    description: { type: "stirng" },
+    description: { type: "string" },
   },
   {
     dataStructure: "JSON", // document oriented db
@@ -26,7 +26,9 @@ let schema = new Schema(
 export async function createCar(data) {
   await connect();
 
-  const repository = new Repository(schema, client);
+  //   const repository = new Repository(schema, client); // breaking change v0.2.0
+
+  const repository = client.fetchRepository(schema);
 
   const car = repository.createEntity(data);
 
