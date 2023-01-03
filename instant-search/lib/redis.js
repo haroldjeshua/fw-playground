@@ -8,11 +8,28 @@ async function connect() {
   }
 }
 
-// Data Model
+// Data Model: hash keys
 class Car extends Entity {}
-let schema = new Schema(Car, {
-  make: { type: "string" },
-  model: { type: "string" },
-  image: { type: "string" },
-  description: { type: "stirng" },
-});
+let schema = new Schema(
+  Car,
+  {
+    make: { type: "string" },
+    model: { type: "string" },
+    image: { type: "string" },
+    description: { type: "stirng" },
+  },
+  {
+    dataStructure: "JSON", // document oriented db
+  }
+);
+
+export async function createCar(data) {
+  await connect();
+
+  const repository = new Repository(schema, client);
+
+  const car = repository.createEntity(data);
+
+  const id = await repository.save(car);
+  return id;
+}
