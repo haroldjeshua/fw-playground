@@ -26,14 +26,38 @@ const CarForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="make" />
-      <input type="text" name="model" />
-      <input type="text" name="image" />
-      <textarea name="description"></textarea>
+    // <form onSubmit={handleSubmit}>
+    //   <input type="text" name="make" />
+    //   <input type="text" name="model" />
+    //   <input type="text" name="image" />
+    //   <textarea name="description"></textarea>
 
-      <button type="submit">Create Car</button>
-    </form>
+    //   <button type="submit">Create Car</button>
+    // </form>
+    <div className="card w-96 bg-base-100 p-4 shadow-xl">
+      <div className="form-control mb-4">
+        <label className="input-group">
+          <span>Make</span>
+          <input
+            type="text"
+            placeholder="Make"
+            name="make"
+            className="input input-bordered"
+          />
+        </label>
+      </div>
+      <div className="form-control mb-4">
+        <label className="input-group">
+          <span>Make</span>
+          <input
+            type="text"
+            placeholder="Make"
+            name="make"
+            className="input input-bordered"
+          />
+        </label>
+      </div>
+    </div>
   );
 };
 
