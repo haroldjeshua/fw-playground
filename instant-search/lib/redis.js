@@ -43,7 +43,7 @@ export async function createIndex() {
   await repository.createIndex();
 }
 
-export async function searchCards(q) {
+export async function searchCars(q) {
   await connect();
 
   const repository = client.fetchRepository(schema);
