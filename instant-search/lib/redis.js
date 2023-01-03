@@ -16,7 +16,7 @@ let schema = new Schema(
     make: { type: "string" },
     model: { type: "string" },
     image: { type: "string" },
-    description: { type: "string" },
+    description: { type: "string", textSearch: true }, // fulltext search
   },
   {
     dataStructure: "JSON", // document oriented db
@@ -34,4 +34,11 @@ export async function createCar(data) {
 
   const id = await repository.save(car);
   return id;
+}
+
+export async function createIndex() {
+  await connect();
+
+  const repository = client.fetchRepository(schema);
+  await repository.createIndex();
 }
