@@ -34,30 +34,53 @@ const CarForm = () => {
 
     //   <button type="submit">Create Car</button>
     // </form>
-    <div className="card w-96 bg-base-100 p-4 shadow-xl">
-      <div className="form-control mb-4">
-        <label className="input-group">
-          <span>Make</span>
-          <input
-            type="text"
-            placeholder="Make"
-            name="make"
-            className="input input-bordered"
-          />
-        </label>
+    <form onSubmit={handleSubmit}>
+      <div className="card w-96 bg-base-100 p-4 shadow-xl border-2 border-current">
+        <div className="form-control mb-4">
+          <label className="input-group">
+            <span>Make</span>
+            <input
+              type="text"
+              name="make"
+              className="input input-bordered w-[100%]"
+            />
+          </label>
+        </div>
+        <div className="form-control mb-4">
+          <label className="input-group">
+            <span>Model</span>
+            <input
+              type="text"
+              name="model"
+              className="input input-bordered w-[100%]"
+            />
+          </label>
+        </div>
+        <div className="form-control mb-4">
+          <label className="input-group">
+            <span>Image</span>
+            <input
+              type="text"
+              name="image"
+              className="input input-bordered w-[100%]"
+            />
+          </label>
+        </div>
+        <div className="form-control mb-4">
+          <label className="input-group">
+            <span>Description</span>
+            <textarea
+              name="description"
+              className="textarea textarea-bordered w-[100%]"
+            ></textarea>
+          </label>
+        </div>
+
+        <button type="submit" className="btn btn-primary">
+          Create a Car
+        </button>
       </div>
-      <div className="form-control mb-4">
-        <label className="input-group">
-          <span>Make</span>
-          <input
-            type="text"
-            placeholder="Make"
-            name="make"
-            className="input input-bordered"
-          />
-        </label>
-      </div>
-    </div>
+    </form>
   );
 };
 
