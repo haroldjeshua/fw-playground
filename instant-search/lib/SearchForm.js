@@ -31,13 +31,34 @@ const CarForm = () => {
         </label>
       </div>
 
-      <ul>
+      {/* <ul>
         {hits.map((hit) => (
           <li key={hit.entityId}>
             {hit.make} {hit.model}
           </li>
         ))}
-      </ul>
+      </ul> */}
+
+      {hits.map((hit) => (
+        <div
+          className="alert flex-col justify-start shadow-lg"
+          key={hit.entityId}
+        >
+          <div className="flex item-center">
+            <img
+              src={hit.image}
+              alt={hit.make}
+              className="w-[100%] object-cover rounded-md"
+            />
+          </div>
+          <div className="flex flex-col items-start">
+            <h3 className="text-3xl font-semibold capitalize">
+              {hit.make} {hit.model}
+            </h3>
+            <p className="font-light">{hit.description}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
