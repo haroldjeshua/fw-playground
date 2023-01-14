@@ -304,6 +304,11 @@
     font-size: clamp(4vw, 4rem, 10vw);
     text-transform: uppercase;
     margin: 0 0 1rem 0;
+    background: linear-gradient(to right, #dcdcdc, #888888);
+    background-size: 1000%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   h3 {
