@@ -121,7 +121,7 @@
     intuitive interfaces on the web.
   </p>
 
-  <button>
+  <button class="button">
     <svg
       width="16"
       height="16"
@@ -132,21 +132,21 @@
       <g clip-path="url(#clip0_1067_170)">
         <path
           d="M2.66602 8.66699C3.85474 8.80826 4.96138 9.34535 5.80785 10.1918C6.65433 11.0383 7.19141 12.1449 7.33268 13.3337C7.92196 12.9939 8.41488 12.5095 8.76483 11.9263C9.11479 11.343 9.31023 10.6801 9.33268 10.0003C10.4521 9.60653 11.4296 8.88965 12.1416 7.94033C12.8536 6.99101 13.2681 5.85188 13.3327 4.66699C13.3327 4.13656 13.122 3.62785 12.7469 3.25278C12.3718 2.87771 11.8631 2.66699 11.3327 2.66699C10.1478 2.7316 9.00866 3.1461 8.05934 3.85809C7.11002 4.57008 6.39314 5.54759 5.99935 6.66699C5.31952 6.68944 4.65665 6.88488 4.07339 7.23484C3.49013 7.5848 3.00574 8.07771 2.66602 8.66699Z"
-          stroke="#121212"
+          stroke="currentColor"
           stroke-width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
         <path
           d="M4.66634 9.33301C3.97249 9.72472 3.41144 10.3147 3.05511 11.0274C2.69877 11.7401 2.5634 12.5429 2.66634 13.333C3.45644 13.4359 4.25929 13.3006 4.97195 12.9442C5.68462 12.5879 6.27462 12.0269 6.66634 11.333"
-          stroke="#121212"
+          stroke="currentColor"
           stroke-width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
         <path
           d="M10.0007 6.66634C10.3688 6.66634 10.6673 6.36786 10.6673 5.99967C10.6673 5.63148 10.3688 5.33301 10.0007 5.33301C9.63246 5.33301 9.33398 5.63148 9.33398 5.99967C9.33398 6.36786 9.63246 6.66634 10.0007 6.66634Z"
-          stroke="#121212"
+          stroke="currentColor"
           stroke-width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -313,8 +313,9 @@
   }
 
   p {
+    font-size: clamp(0.75rem, 1rem, 1.25rem);
     max-width: 400px;
-    font-weight: 200;
+    font-weight: 300;
   }
 
   img {
@@ -333,5 +334,24 @@
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
+  }
+
+  .button {
+    all: unset;
+    display: flex;
+    min-width: 128px;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #dcdcdc;
+    color: #121212;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .button:hover {
+    filter: brightness(1.2);
   }
 </style>
