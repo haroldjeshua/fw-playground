@@ -9,7 +9,9 @@
     let p = svg.createSVGPoint();
     p.x = screenX;
     p.y = screenY;
-    return p.matrixTransform(svg.getScreenCTM()); /* can be .inverse() */
+    return p.matrixTransform(
+      svg.getScreenCTM().inverse()
+    ); /* can be .inverse() */
   }
 
   let coords = spring(
@@ -165,7 +167,7 @@
 
 <img src={rain} alt="noise" />
 
-<svg
+<!-- <svg
   class="bg"
   bind:this={svgSrc}
   on:mousemove={(e) => coords.set(screenToSVG({ x: e.clientX, y: e.clientY }))}
@@ -274,6 +276,169 @@
       <rect width="1728" height="1117" fill="white" />
     </clipPath>
   </defs>
+</svg> -->
+
+<svg
+  class="bg"
+  bind:this={svgSrc}
+  on:mousemove={(e) => coords.set(screenToSVG({ x: e.clientX, y: e.clientY }))}
+  viewBox="0 0 800 489"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g clip-path="url(#clip0_1075_2)">
+    <rect width="800" height="489" fill="#121212" />
+    <g filter="url(#filter0_f_1075_2)">
+      <rect
+        x="-66.0605"
+        y="492.432"
+        width="100"
+        height="100"
+        transform="rotate(-102.905 -66.0605 492.432)"
+        fill="#2C00FF"
+      />
+      <rect
+        x="145.67"
+        y="393.863"
+        width="100"
+        height="100"
+        transform="rotate(-102.905 145.67 393.863)"
+        fill="#B82F1B"
+      />
+      <rect
+        x="-55.957"
+        y="267.409"
+        width="100"
+        height="100"
+        transform="rotate(-102.905 -55.957 267.409)"
+        fill="#EA533D"
+      />
+      <circle
+        cx="343.852"
+        cy="465.039"
+        r="100"
+        transform="rotate(-147.905 343.852 465.039)"
+        fill="#1D50B5"
+      />
+      <circle
+        cx="133.116"
+        cy="469.798"
+        r="100"
+        transform="rotate(-147.905 133.116 469.798)"
+        fill="#2DD685"
+      />
+      <path
+        d="M269.999 582.796C252.465 610.753 205.076 513.159 215.545 495.526C226.013 477.893 115.074 484.452 112.168 444.856C109.261 405.261 23.0706 378.944 -9.3537 440.056C-41.778 501.168 -30.6228 348.81 -83.387 367.066C-136.151 385.321 -122.462 274.096 -77.1887 300.719C-31.9151 327.343 -77.1887 300.719 6.58953 310.178C90.3677 319.636 -29.4369 266.926 8.46505 262.958C46.367 258.989 6.89359 216.527 19.6889 202.714C32.4841 188.902 164.487 201.456 123.246 239.923C82.0042 278.389 124.986 347.25 180.708 335.571C236.43 323.892 246.067 430.86 259.064 389.435C272.061 348.01 330.624 348.736 370.418 422.68C410.212 496.624 305.78 442.932 305.78 442.932C305.78 442.932 335.214 498.574 300.982 494.811C266.75 491.048 287.532 554.839 269.999 582.796Z"
+        fill="#B37BEC"
+      />
+    </g>
+    <g
+      transform="translate({$coords.x} {$coords.y})"
+      style="mix-blend-mode:color-dodge"
+      filter="url(#filter1_f_1075_2)"
+    >
+      <rect
+        x="349.471"
+        y="378.906"
+        width="195.147"
+        height="146"
+        transform="rotate(180 349.471 378.906)"
+        fill="#782D2D"
+      />
+      <rect
+        x="472.953"
+        y="284.906"
+        width="195.147"
+        height="146"
+        rx="73"
+        transform="rotate(180 472.953 284.906)"
+        fill="#2D7866"
+      />
+      <ellipse
+        cx="568.874"
+        cy="328.906"
+        rx="55.1262"
+        ry="50"
+        transform="rotate(180 568.874 328.906)"
+        fill="#ED7474"
+      />
+      <ellipse
+        cx="114.083"
+        cy="415.906"
+        rx="99.7783"
+        ry="87"
+        transform="rotate(180 114.083 415.906)"
+        fill="#E09863"
+      />
+      <ellipse
+        cx="330.179"
+        cy="369.906"
+        rx="238.696"
+        ry="50"
+        transform="rotate(180 330.179 369.906)"
+        fill="#44C0C8"
+      />
+      <ellipse
+        rx="220.19"
+        ry="54.341"
+        transform="matrix(0.432942 0.901422 -0.930034 0.367473 183.757 357.453)"
+        fill="#734BB7"
+      />
+      <ellipse
+        rx="220.19"
+        ry="54.341"
+        transform="matrix(0.432942 0.901422 -0.930034 0.367473 -30.1312 191.453)"
+        fill="#C24EA2"
+      />
+    </g>
+  </g>
+  <defs>
+    <filter
+      id="filter0_f_1075_2"
+      x="-245.426"
+      y="19.6006"
+      width="817.291"
+      height="771.59"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB"
+    >
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend
+        mode="normal"
+        in="SourceGraphic"
+        in2="BackgroundImageFix"
+        result="shape"
+      />
+      <feGaussianBlur
+        stdDeviation="64"
+        result="effect1_foregroundBlur_1075_2"
+      />
+    </filter>
+    <filter
+      id="filter1_f_1075_2"
+      x="-338.051"
+      y="-208.048"
+      width="1162.05"
+      height="965.003"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB"
+    >
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend
+        mode="normal"
+        in="SourceGraphic"
+        in2="BackgroundImageFix"
+        result="shape"
+      />
+      <feGaussianBlur
+        stdDeviation="100"
+        result="effect1_foregroundBlur_1075_2"
+      />
+    </filter>
+    <clipPath id="clip0_1075_2">
+      <rect width="800" height="489" fill="white" />
+    </clipPath>
+  </defs>
 </svg>
 
 <style>
@@ -351,6 +516,7 @@
     gap: 1rem;
     background-color: #dcdcdc;
     color: #121212;
+    font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.2s ease;
