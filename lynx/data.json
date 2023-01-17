@@ -1,0 +1,25 @@
+{
+    "name": "Harold Varde",
+    "avatar": "https://pbs.twimg.com/profile_images/1604671951850467330/7F6c3h___400x400.jpg",
+    "links": [
+        {
+            "title": "My website",
+            "url": "https://hjv.vercel.app",
+            "image": "https://pbs.twimg.com/profile_images/1604671951850467330/7F6c3h___400x400.jpg"
+        },
+        {
+            "title": "Read.cv",
+            "url": "https://read.cv/hjv"
+        }
+    ],
+    "socials": [
+        {
+            "title": "Twitter",
+            "url": "https://twitter.com/haroldvarde"
+        },
+        {
+            "title": "Github",
+            "url": "https://github.com/haroldjeshua"
+        }
+    ]
+}
