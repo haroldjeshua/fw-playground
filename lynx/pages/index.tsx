@@ -42,20 +42,6 @@ function LinkCard({
   );
 }
 
-function SocialCard({
-  url,
-  title,
-  image
-}: {
-  url: string;
-  title: string;
-  image: string;
-}) {
-  return (
-      <a href={url} className="min-h-[50px] min-w-[50px] flex items-center justify-center"><FiTwitter size={32} /></a>
-  )
-}
-
 export default function Home() {
   return (
     <main className="text-white h-screen">
@@ -72,10 +58,29 @@ export default function Home() {
           <LinkCard key={link.url} {...link} />
         ))}
 
-        <div className="flex justify-center gap-2">
-          {data.socials.map((social) => (
-            <SocialCard key={social.url} {...social} />
-          ))}
+        <div className="flex justify-center gap-4">
+          {data.socials.map((social) => {
+            if (social.url.includes("twitter")) {
+              return (
+                <a
+                  href={social.url}
+                  className="min-h-[50px] min-w-[50px] flex items-center justify-center"
+                >
+                  <FiTwitter size={32} />
+                </a>
+              );
+            }
+            if (social.url.includes("github")) {
+              return (
+                <a
+                  href={social.url}
+                  className="min-h-[50px] min-w-[50px] flex items-center justify-center"
+                >
+                  <FiGithub size={32} />
+                </a>
+              );
+            }
+          })}
         </div>
       </section>
     </main>
