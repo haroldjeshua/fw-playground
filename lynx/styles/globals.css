@@ -6,16 +6,21 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #ec99ff;
-  background-image: radial-gradient(
-      at 12% 83%,
-      hsla(80, 76%, 75%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 14% 88%, hsla(255, 77%, 66%, 1) 0px, transparent 50%),
-    radial-gradient(at 39% 93%, hsla(241, 65%, 62%, 1) 0px, transparent 50%),
-    radial-gradient(at 12% 74%, hsla(17, 73%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 67% 43%, hsla(328, 68%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 68% 47%, hsla(309, 62%, 79%, 1) 0px, transparent 50%),
-    radial-gradient(at 98% 78%, hsla(72, 95%, 64%, 1) 0px, transparent 50%);
+  background-image: linear-gradient(
+    225deg,
+    hsl(0deg 0% 7%) 0%,
+    hsl(60deg 2% 10%) 18%,
+    hsl(0deg 2% 12%) 30%,
+    hsl(20deg 4% 15%) 39%,
+    hsl(30deg 4% 18%) 46%,
+    hsl(20deg 6% 20%) 52%,
+    hsl(27deg 8% 23%) 58%,
+    hsl(14deg 10% 25%) 63%,
+    hsl(357deg 15% 27%) 67%,
+    hsl(335deg 21% 29%) 72%,
+    hsl(316deg 26% 31%) 78%,
+    hsl(298deg 30% 33%) 84%,
+    hsl(278deg 35% 35%) 91%,
+    hsl(259deg 41% 37%) 100%
+  );
 }
