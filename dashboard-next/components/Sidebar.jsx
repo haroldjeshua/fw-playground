@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import { FiBox } from "react-icons/fi";
+import { FiBox, FiGrid, FiUser, FiShoppingBag, FiSettings } from "react-icons/fi";
+import data from "../data.json";
 
 const Sidebar = ({ children }) => {
   return (
@@ -16,26 +17,34 @@ const Sidebar = ({ children }) => {
             id="dashboardMenu"
             className="flex flex-col gap-2 mt-2 py-2 border-t-[1px]"
           >
-            <Link href="/">
-              <div className="bg-purple-800 p-3 rounded-lg inline-block hover:bg-purple-700 transition-all ease">
-                <FiBox size={32} />
-              </div>
-            </Link>
-            <Link href="/">
-              <div className="bg-purple-800 p-3 rounded-lg inline-block hover:bg-purple-700 transition-all ease">
-                <FiBox size={32} />
-              </div>
-            </Link>
-            <Link href="/">
-              <div className="bg-purple-800 p-3 rounded-lg inline-block hover:bg-purple-700 transition-all ease">
-                <FiBox size={32} />
-              </div>
-            </Link>
-            <Link href="/">
-              <div className="bg-purple-800 p-3 rounded-lg inline-block hover:bg-purple-700 transition-all ease">
-                <FiBox size={32} />
-              </div>
-            </Link>
+            {data.menus.map((menu) => {
+              let icon;
+
+              switch (true) {
+                case menu.title.indexOf("dashboard") !== -1:
+                  icon = <FiGrid size={32} />;
+                  break;
+                case menu.title.indexOf("account") !== -1:
+                  icon = <FiUser size={32} />;
+                  break;
+                case menu.title.indexOf("cart") !== -1:
+                  icon = <FiShoppingBag size={32} />;
+                  break;
+                case menu.title.indexOf("settings") !== -1:
+                  icon = <FiSettings size={32} />;
+                  break;
+
+                default:
+                  break;
+              }
+              return (
+                <Link key={menu.title} href="/" {...menu}>
+                  <div className="bg-purple-800 p-3 rounded-lg inline-block hover:bg-purple-700 transition-all ease">
+                    {icon}
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
