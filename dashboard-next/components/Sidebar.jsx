@@ -1,6 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { FiBox, FiGrid, FiUser, FiShoppingBag, FiSettings } from "react-icons/fi";
+import {
+  FiBox,
+  FiGrid,
+  FiUser,
+  FiShoppingBag,
+  FiSettings,
+} from "react-icons/fi";
 import data from "../data.json";
 
 const Sidebar = ({ children }) => {
@@ -21,16 +27,16 @@ const Sidebar = ({ children }) => {
               let icon;
 
               switch (true) {
-                case menu.title.indexOf("dashboard") !== -1:
+                case menu.href.indexOf("dashboard") !== -1:
                   icon = <FiGrid size={32} />;
                   break;
-                case menu.title.indexOf("account") !== -1:
+                case menu.href.indexOf("account") !== -1:
                   icon = <FiUser size={32} />;
                   break;
-                case menu.title.indexOf("cart") !== -1:
+                case menu.href.indexOf("order") !== -1:
                   icon = <FiShoppingBag size={32} />;
                   break;
-                case menu.title.indexOf("settings") !== -1:
+                case menu.href.indexOf("settings") !== -1:
                   icon = <FiSettings size={32} />;
                   break;
 
@@ -38,7 +44,7 @@ const Sidebar = ({ children }) => {
                   break;
               }
               return (
-                <Link key={menu.title} href="/" {...menu}>
+                <Link key={menu.title} {...menu}>
                   <div className="bg-purple-800 p-3 rounded-lg inline-block hover:bg-purple-700 transition-all ease">
                     {icon}
                   </div>

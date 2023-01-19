@@ -2,20 +2,37 @@
     "company": "Harv Dashboard",
     "menus": [
         {
-            "title": "dashboard",
-            "url": "https://hjv.vercel.app"
+            "title": "Dashboard",
+            "href": "/dashboard"
         },
         {
-            "title": "account",
-            "url": "https://hjv.vercel.app"
+            "title": "Account",
+            "href": "/account"
         },
         {
-            "title": "cart",
-            "url": "https://hjv.vercel.app"
+            "title": "Order",
+            "href": "/order"
         },
         {
-            "title": "settings",
-            "url": "https://hjv.vercel.app"
+            "title": "Settings",
+            "href": "/settings"
+        }
+    ],
+    "cards": [
+        {
+            "text": "Daily Revenue",
+            "amount": "123456",
+            "gains": "+16"
+        },
+        {
+            "text": "Daily Revenue",
+            "amount": "456123",
+            "gains": "+16"
+        },
+        {
+            "text": "Daily Revenue",
+            "amount": "56732",
+            "gains": "+16"
         }
     ]
 }
