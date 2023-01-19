@@ -1,6 +1,12 @@
 import Image from "next/image";
 import data from "../data.json";
-import { TbBrandTwitter, TbBrandInstagram, TbBrandMedium, TbBrandLinkedin, TbExternalLink } from "react-icons/tb";
+import {
+  TbBrandTwitter,
+  TbBrandInstagram,
+  TbBrandMedium,
+  TbBrandLinkedin,
+  TbExternalLink,
+} from "react-icons/tb";
 
 function LinkCard({
   url,
@@ -60,46 +66,33 @@ export default function Home() {
 
         <div className="flex justify-center gap-4">
           {data.socials.map((social) => {
-            if (social.url.includes("twitter")) {
-              return (
-                <a
-                  href={social.url}
-                  className="min-h-[50px] min-w-[50px] flex items-center justify-center"
-                >
-                  <TbBrandTwitter size={32} />
-                </a>
-              );
+            let icon;
+
+            switch (true) {
+              case social.url.indexOf("twitter") !== -1:
+                icon = <TbBrandTwitter size={32} />;
+                break;
+              case social.url.indexOf("instagram") !== -1:
+                icon = <TbBrandInstagram size={32} />;
+                break;
+              case social.url.indexOf("medium") !== -1:
+                icon = <TbBrandMedium size={32} />;
+                break;
+              case social.url.indexOf("linkedin") !== -1:
+                icon = <TbBrandLinkedin size={32} />;
+                break;
+              default:
+                break;
             }
-            if (social.url.includes("instagram")) {
-              return (
-                <a
-                  href={social.url}
-                  className="min-h-[50px] min-w-[50px] flex items-center justify-center"
-                >
-                  <TbBrandInstagram size={32} />
-                </a>
-              );
-            }
-            if (social.url.includes("medium")) {
-              return (
-                <a
-                  href={social.url}
-                  className="min-h-[50px] min-w-[50px] flex items-center justify-center"
-                >
-                  <TbBrandMedium size={32} />
-                </a>
-              );
-            }
-            if (social.url.includes("linkedin")) {
-              return (
-                <a
-                  href={social.url}
-                  className="min-h-[50px] min-w-[50px] flex items-center justify-center"
-                >
-                  <TbBrandLinkedin size={32} />
-                </a>
-              );
-            }
+
+            return (
+              <a
+                href={social.url}
+                className="min-h-[50px] min-w-[50px] flex items-center justify-center"
+              >
+                {icon}
+              </a>
+            );
           })}
         </div>
       </section>
