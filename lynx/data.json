@@ -8,8 +8,16 @@
             "image": "https://pbs.twimg.com/profile_images/1604671951850467330/7F6c3h___400x400.jpg"
         },
         {
+            "title": "Github",
+            "url": "https://github.com/haroldjeshua"
+        },
+        {
             "title": "Read.cv",
             "url": "https://read.cv/hjv"
+        },
+        {
+            "title": "Codepen",
+            "url": "https://codepen.io/haroldjeshua"
         }
     ],
     "socials": [
@@ -18,8 +26,16 @@
             "url": "https://twitter.com/haroldvarde"
         },
         {
-            "title": "Github",
-            "url": "https://github.com/haroldjeshua"
+            "title": "Instagram",
+            "url": "https://instagram.com/haroldjeshua"
+        },
+        {
+            "title": "Medium",
+            "url": "https://haroldjeshua.medium.com/"
+        },
+        {
+            "title": "LinkedIn",
+            "url": "https://www.linkedin.com/in/harold-jeshua-varde-71a54a14b/"
         }
     ]
 }

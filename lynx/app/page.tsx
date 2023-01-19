@@ -1,6 +1,6 @@
 import Image from "next/image";
 import data from "../data.json";
-import { FiExternalLink, FiTwitter, FiGithub } from "react-icons/fi";
+import { TbBrandTwitter, TbBrandInstagram, TbBrandMedium, TbBrandLinkedin, TbExternalLink } from "react-icons/tb";
 
 function LinkCard({
   url,
@@ -35,7 +35,7 @@ function LinkCard({
           <h2 className="font-semibold w-full text-center">{title}</h2>
         </div>
         <div className="flex">
-          <FiExternalLink />
+          <TbExternalLink />
         </div>
       </div>
     </a>
@@ -66,17 +66,37 @@ export default function Home() {
                   href={social.url}
                   className="min-h-[50px] min-w-[50px] flex items-center justify-center"
                 >
-                  <FiTwitter size={32} />
+                  <TbBrandTwitter size={32} />
                 </a>
               );
             }
-            if (social.url.includes("github")) {
+            if (social.url.includes("instagram")) {
               return (
                 <a
                   href={social.url}
                   className="min-h-[50px] min-w-[50px] flex items-center justify-center"
                 >
-                  <FiGithub size={32} />
+                  <TbBrandInstagram size={32} />
+                </a>
+              );
+            }
+            if (social.url.includes("medium")) {
+              return (
+                <a
+                  href={social.url}
+                  className="min-h-[50px] min-w-[50px] flex items-center justify-center"
+                >
+                  <TbBrandMedium size={32} />
+                </a>
+              );
+            }
+            if (social.url.includes("linkedin")) {
+              return (
+                <a
+                  href={social.url}
+                  className="min-h-[50px] min-w-[50px] flex items-center justify-center"
+                >
+                  <TbBrandLinkedin size={32} />
                 </a>
               );
             }
