@@ -20,19 +20,19 @@
     ],
     "cards": [
         {
-            "text": "Daily Revenue",
-            "amount": "123456",
-            "gains": "+16"
+            "title": "Daily Revenue",
+            "amount": "1234",
+            "gains": "+18%"
         },
         {
-            "text": "Daily Revenue",
-            "amount": "456123",
-            "gains": "+16"
+            "title": "YTD Revenue",
+            "amount": "4567890",
+            "gains": "+15%"
         },
         {
-            "text": "Daily Revenue",
-            "amount": "56732",
-            "gains": "+16"
+            "title": "Customers",
+            "amount": "5234",
+            "gains": "+22%"
         }
     ]
 }
