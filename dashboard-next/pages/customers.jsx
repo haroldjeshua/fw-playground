@@ -10,7 +10,7 @@ const customers = () => {
       </div>
       <div className="p-4">
         <div className="w-full bg-white m-auto p-4 border rounded-lg overflow-y-auto">
-          <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-col-s2 items-center justify-between my-4 p-2 cursor-pointer">
+          <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-col-s2 items-center justify-between my-4 p-2 cursor-pointer font-bold">
             <span>Name</span>
             <span className="text-right sm:text-left">Email</span>
             <span className="hidden md:grid">Last Order</span>
@@ -20,12 +20,27 @@ const customers = () => {
             {data.orders.map((order, id) => (
               <li
                 key={id}
-                className="grid grid-cols-2 md:grid-cols-3 items-center justify-between bg-gray-50 hover:bg-gray-200 my-4 p-2 rounded-lg cursor-pointer"
+                className="grid grid-cols-2 md:grid-cols-4 items-center justify-between bg-gray-50 hover:bg-gray-200 my-4 p-2 rounded-lg cursor-pointer"
               >
-                <div>
-                  <div>
-                    <FiUser />
+                <div className="flex items-center gap-4">
+                  <div className="bg-purple-200 p-3 rounded-lg">
+                    <FiUser className="text-purple-800" />
                   </div>
+                  <p className="font-medium">
+                    {order.name.first + " " + order.name.last}
+                  </p>
+                </div>
+                <p>
+                  {order.name.first.toLowerCase() +
+                    order.name.last.toLowerCase()}
+                  @gmail.com
+                </p>
+                <p className="hidden md:flex">{order.date}</p>
+                <div className="sm:flex hidden justify-between items-center">
+                  <p>{order.method}</p>
+                  <a href="#!">
+                    <FiMoreVertical />
+                  </a>
                 </div>
               </li>
             ))}
