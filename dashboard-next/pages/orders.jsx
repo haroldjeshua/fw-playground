@@ -11,7 +11,7 @@ const orders = () => {
 
       <div className="p-4">
         <div className="w-full bg-white m-auto p-4 border rounded-lg overflow-y-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-center justify-between cursor-pointer">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-center justify-between font-bold cursor-pointer">
             <span>Order</span>
             <span className="text-right sm:text-left">Status</span>
             <span className="hidden md:grid">Last Order</span>
@@ -27,6 +27,32 @@ const orders = () => {
                   <div className="bg-purple-200 p-3 rounded-lg">
                     <FiShoppingBag className="text-purple-800" />
                   </div>
+                  <div>
+                    <p className="text-gray-800 font-semibold">
+                      ${order.total.toLocaleString()}
+                    </p>
+                    <p className="text-gray-800 text-sm">{order.name.first}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-right sm:text-left">
+                  <span
+                    className={
+                      order.status == "Processing"
+                        ? "bg-green-200 p-2 rounded-lg"
+                        : order.status == "Completed"
+                        ? "bg-blue-200 p-2 rounded-lg"
+                        : "bg-yellow-200 p-2 rounded-lg"
+                    }
+                  >
+                    {order.status}
+                  </span>
+                </p>
+                <p className="hidden md:flex">{order.date}</p>
+                <div className="hidden sm:flex justify-between items-center">
+                  <p>{order.method}</p>
+                  <a href="#!">
+                    <FiMoreVertical />
+                  </a>
                 </div>
               </li>
             ))}
