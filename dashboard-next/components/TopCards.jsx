@@ -7,7 +7,7 @@ const TopCards = () => {
         <div
           className={`${
             index === data.cards.length - 1 ? "lg:col-span-1" : "lg:col-span-2"
-          } col-span-1 bg-white justify-between w-full border p-4 rounded-lg`}
+          } col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg`}
         >
           <div className="flex flex-col w-full pb-4">
             <p className="text-2xl font-bold">{card.title}</p>
