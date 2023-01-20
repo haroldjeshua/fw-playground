@@ -25,8 +25,8 @@ const BarChart = () => {
         {
           label: "Revenue $",
           data: [1212, 3442, 4654, 4234, 6124, 5444, 1235],
-          borderColor: "hsl(211, 76%, 45%)",
-          backgroundColor: "hsla(211, 76%, 45%, 50%)",
+          borderColor: "rgb(216, 180, 254)",
+          backgroundColor: "rgb(192, 132, 252)",
         },
       ],
     });
