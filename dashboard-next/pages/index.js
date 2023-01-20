@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen bg-gray-100 font-manrope">
+      <main className="min-h-screen bg-gray-100">
         <Header />
         <TopCards />
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4 p-4">
