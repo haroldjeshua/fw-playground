@@ -2,9 +2,13 @@ import data from "../data.json";
 
 const TopCards = () => {
   return (
-    <div className="grid lg:grid-cols-6 gap-4 p-4">
-      {data.cards.map((card) => (
-        <div className="lg:col-span-2 col-span-1 bg-white justify-between w-full border p-4 rounded-lg">
+    <div className="grid lg:grid-cols-5 gap-4 p-4">
+      {data.cards.map((card, index) => (
+        <div
+          className={`${
+            index === data.cards.length - 1 ? "lg:col-span-1" : "lg:col-span-2"
+          } col-span-1 bg-white justify-between w-full border p-4 rounded-lg`}
+        >
           <div className="flex flex-col w-full pb-4">
             <p className="text-2xl font-bold">{card.title}</p>
             <p className="text-gray-600">
