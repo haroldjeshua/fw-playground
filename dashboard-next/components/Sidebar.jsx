@@ -22,14 +22,14 @@ const Sidebar = ({ children }) => {
             id="dashboardMenu"
             className="flex flex-col gap-2 mt-2 py-2 border-t-[1px]"
           >
-            {data.menus.map((menu) => {
+            {data.menus.map((menu, id) => {
               let icon;
 
               switch (true) {
                 case menu.href.indexOf("dashboard") !== -1:
                   icon = <FiGrid size={32} />;
                   break;
-                case menu.href.indexOf("account") !== -1:
+                case menu.href.indexOf("customers") !== -1:
                   icon = <FiUser size={32} />;
                   break;
                 case menu.href.indexOf("order") !== -1:
@@ -43,7 +43,7 @@ const Sidebar = ({ children }) => {
                   break;
               }
               return (
-                <Link key={menu.title} {...menu}>
+                <Link key={id} {...menu}>
                   <div className="bg-purple-800 p-3 rounded-lg inline-block hover:bg-purple-700 transition-all ease">
                     {icon}
                   </div>

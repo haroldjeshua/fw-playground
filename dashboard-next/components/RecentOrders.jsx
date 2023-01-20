@@ -18,7 +18,7 @@ const RecentOrders = () => {
             <div className="flex items-center justify-between gap-2 w-full">
               <div className="flex lg:flex-row flex-col gap-2">
                 <p className="text-gray-800">{order.name.first}</p>
-                <p className="text-gray-400 text-sm align-sel">{order.date}</p>
+                <p className="text-gray-400 text-sm self-end">{order.date}</p>
               </div>
               <div className="flex items-center">
                 <p className="text-gray-600 font-semibold">{order.total}</p>

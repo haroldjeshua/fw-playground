@@ -6,8 +6,8 @@
             "href": "/dashboard"
         },
         {
-            "title": "Account",
-            "href": "/account"
+            "title": "Customers",
+            "href": "/customers"
         },
         {
             "title": "Orders",
