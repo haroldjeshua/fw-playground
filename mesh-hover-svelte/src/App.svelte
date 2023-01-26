@@ -117,7 +117,7 @@
   </div>
 
   <h1>Harold Varde</h1>
-  <h3>Frontend & Design</h3>
+  <h3>Frontend + Design</h3>
   <p>
     A frontend developer with a strong eye for design. Building apps with
     intuitive interfaces on the web.
