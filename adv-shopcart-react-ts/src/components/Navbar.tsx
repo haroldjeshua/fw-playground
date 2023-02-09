@@ -1,9 +1,10 @@
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { IconShoppingBag } from "@tabler/icons-react";
 
 export function Navbar() {
   return (
-    <NavbarBs className="bg-white shadow-sm mb-3">
+    <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
       <Container>
         <Nav className="me-auto">
           <Nav.Link as={NavLink} to={"/"}>
@@ -16,23 +17,25 @@ export function Navbar() {
             About
           </Nav.Link>
         </Nav>
-        <Button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-shopping-bag"
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+        <Button
+          style={{ width: "3rem", height: "3rem" }}
+          className="position-relative"
+          variant="outline-primary"
+        >
+          <IconShoppingBag size="24" />
+          <div
+            className="d-flex justify-content-center align-items-center bg-danger text-light rounded-circle position-absolute"
+            style={{
+              fontSize: "0.75rem",
+              width: "1rem",
+              height: "1rem",
+              bottom: "0",
+              right: "0",
+              transform: "translate(25%, 25%)",
+            }}
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"></path>
-            <path d="M9 11v-5a3 3 0 0 1 6 0v5"></path>
-          </svg>
+            3
+          </div>
         </Button>
       </Container>
     </NavbarBs>
