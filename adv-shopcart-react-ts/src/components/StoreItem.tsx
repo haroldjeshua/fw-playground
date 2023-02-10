@@ -38,8 +38,8 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
               + Add to Cart
             </Button>
           ) : (
-            <div className="d-flex align-items-center flex-column g-2">
-              <div className="d-flex align-items-center justify-content-center g-2">
+            <div className="d-flex align-items-center flex-column gap-2">
+              <div className="d-flex align-items-center justify-content-center gap-2">
                 <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                 <span className="fs-3">{quantity}</span> in cart
                 <Button onClick={() => increaseCartQuantity(id)}>+</Button>
