@@ -2,8 +2,8 @@
 
 Playground for building things from different frameworks. Includes frameworks sandboxes, test projects and starter lessons.
 
-1.  Shopping Cart - **React**: using React + Stripe + BS w/ Vite
-2.  Weather App - **Vanilla**: plain HTML + CSS + JS
+1.  Weather App - **Vanilla**: plain HTML + CSS + JS w/ Vite
+2.  Shopping Cart - **React**: using React + Stripe + BS w/ Vite
 3.  Starter - **Svelte**: SvelteKit demo app
 4.  Mesh Hover BG animation - **Svelte**: blurry mesh gradient bg animation using Svelte
 5.  Instant Search App - **Next**: fulltext search app using Redis + Next.js w/ Tailwind + DaisyUI
