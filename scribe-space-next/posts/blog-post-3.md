@@ -11,6 +11,8 @@ Developing countries are facing a lot of challenges that affect their growth and
 
 Productivity helps in the creation of more jobs and income for the people in these countries. With the right technology, it can lead to efficient and effective use of resources, which in turn boosts the economy. For example, with the help of mobile banking, people in developing countries can access financial services easily, which leads to financial literacy and stability.
 
+![images/image3.jpg](/images/image3.jpg)
+
 On the other hand, technology can help with various areas of development, such as education and healthcare. By providing access to information, technology can help improve education, which leads to better opportunities for the people. In healthcare, technology can help improve diagnosis and treatment, leading to better healthcare outcomes for patients.
 
 # Conclusion
