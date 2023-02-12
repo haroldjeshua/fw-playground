@@ -1,6 +1,6 @@
 ---
 title: The Power of Tech in Productivity
-date: 2023-01-19
+date: "2023-01-19"
 ---
 
 In today's fast-paced world, technology has become an integral part of our lives. From communication to entertainment, technology has made our lives easier in numerous ways. One area where technology has made a significant impact is in productivity.

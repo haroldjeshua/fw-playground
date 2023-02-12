@@ -1,6 +1,6 @@
 ---
 title: Productivity in the Digital Age
-date: 2023-01-19
+date: "2023-01-19"
 ---
 
 The digital age has changed the way we work, communicate, and live our lives. With technology advancing faster than ever before, it's important to find ways to stay productive and focused. In this post, we'll explore some tips and tools to help you maximize your productivity in the digital age.
