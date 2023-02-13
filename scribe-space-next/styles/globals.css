@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  a {
+    @apply hover:text-gray-700 transition-all ease-linear;
+  }
+}
