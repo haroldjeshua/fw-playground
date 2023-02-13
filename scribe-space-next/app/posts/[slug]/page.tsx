@@ -10,7 +10,7 @@ const getPostContent = (slug: string) => {
   return matterResult;
 };
 
-const BlogPage = (props: any) => {
+const PostsPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   return (
@@ -21,4 +21,4 @@ const BlogPage = (props: any) => {
   );
 };
 
-export default BlogPage;
+export default PostsPage;
