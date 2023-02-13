@@ -55,15 +55,15 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body
-        className={`${inter.className} relative flex flex-col min-h-screen justify-start bg-gradient-to-br from-indigo-200 to-violet-300 py-16`}
-      >
+      <body>
         <main
-          className={`flex flex-col gap-8 relative w-full bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10`}
+          className={`${inter.className} relative flex flex-col min-h-screen justify-start bg-gradient-to-br from-indigo-200 to-violet-300 py-16`}
         >
-          {header}
-          {children}
-          {footer}
+          <div className="flex flex-col gap-8 relative w-full bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+            {header}
+            {children}
+            {footer}
+          </div>
         </main>
       </body>
     </html>
