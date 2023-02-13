@@ -11,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const header = (
-    <header className="flex flex-col justify-center text-center mb-8">
+    <header className="flex flex-col items-center text-center mb-8">
       <IconSquareRoundedLetterS size={64} />
       <Link href="/">
         <h1 className="text-3xl font-semibold">Scribe Space</h1>
@@ -28,19 +28,19 @@ export default function RootLayout({
   );
 
   const footer = (
-    <footer>
-      <div>
-        <h4>Made with ❤ by Harv</h4>
-      </div>
+    <footer className="relative bottom-0">
+      <h4>Made with ❤ by Harv</h4>
     </footer>
   );
 
   return (
     <html>
       <head />
-      <body className="relative flex min-h-screen flex-col justify-start overflow-hidden bg-gray-100 py-24">
+      <body
+        className={`${inter.className} relative flex flex-col min-h-screen justify-start bg-gradient-to-br from-indigo-200 to-violet-300 py-16`}
+      >
         <main
-          className={`${inter.className} relative w-full bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10`}
+          className={`flex flex-col gap-4 relative w-full bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10`}
         >
           {header}
           {children}

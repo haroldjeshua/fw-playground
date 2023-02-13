@@ -7,7 +7,11 @@ const HomePage = () => {
   const postPreviews = postMetaData.map((post) => (
     <PostPreview key={post.slug} {...post} />
   ));
-  return <div>{postPreviews}</div>;
+  return (
+    <section className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      {postPreviews}
+    </section>
+  );
 };
 
 export default HomePage;
