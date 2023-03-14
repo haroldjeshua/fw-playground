@@ -9,7 +9,7 @@ type Note = {
 
 export type NoteData = {
   title: string;
-  body: string;
+  markdown: string;
   tags: Tag[];
 };
 
