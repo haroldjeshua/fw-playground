@@ -27,14 +27,14 @@ const ProjectsPage = async () => {
                 <h3 className="text-2xl font-medium">{project.name}</h3>
                 <p className="text-sm font-light">{project.description}</p>
               </div>
-              <div className="flex justify-between gap-4 mt-4 text-neutral-600">
-                <span>
+              <div className="w-1/4 flex justify-between gap-4 mt-4 text-neutral-600">
+                <span className="flex items-center gap-2">
                   <FiStar /> {project.stargazers_count}
                 </span>
-                <span>
+                <span className="flex items-center gap-2">
                   <FiGitBranch /> {project.forks_count}
                 </span>
-                <span>
+                <span className="flex items-center gap-2">
                   <FiEye /> {project.watchers_count}
                 </span>
               </div>
