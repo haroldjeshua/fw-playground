@@ -1,20 +1,7 @@
-import Link from "next/link";
-
 const HomePage = () => {
   return (
-    <div>
-      <h1>Harv Course</h1>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/about/stack">Stack</Link>
-        </li>
-      </ul>
+    <div className="h-[calc(100vh_-_64px)] flex justify-center items-center">
+      <h1 className="text-display font-bold">Harv Course</h1>
     </div>
   );
 };

@@ -16,3 +16,14 @@ cons:
 - not as interactive
 - no component state, we can not use the `useState` hook
 - no component lifecycle methods, we cannot use the `useEffect` hook
+
+lessons covered:
+
+- routing system
+- nested routes
+- layouts
+- metadata api
+- next font google
+- header
+- rsc
+- use client
