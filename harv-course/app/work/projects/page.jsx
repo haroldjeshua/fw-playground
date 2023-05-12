@@ -5,6 +5,9 @@ async function fetchProjects() {
   const response = await fetch(
     "https://api.github.com/users/haroldjeshua/repos"
   );
+
+  await new Promise((resolve) => setTimeout(resolve, 1000)); // wait 1s
+
   const projects = await response.json();
   return projects;
 }
