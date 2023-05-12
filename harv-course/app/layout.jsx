@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const space = Space_Grotesk({ subsets: ["latin"] });
 
@@ -16,7 +17,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={space.className}>
         <Header />
-        <main>{children}</main>
+        <main className="min-h-[calc(100vh_-_64px)]">{children}</main>
+        <Footer />
       </body>
     </html>
   );

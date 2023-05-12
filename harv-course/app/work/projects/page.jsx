@@ -21,7 +21,7 @@ const ProjectsPage = async () => {
           <li key={project.id} className="my-8 mx-0">
             <Link
               href={`/work/projects/${project.name}`}
-              className="flex justify-between gap-4 bg-neutral-800 text-white p-8 rounded-xl transition-all ease-in-out duration-150 hover:-translate-y-1 hover:shadow-sm"
+              className="flex justify-between gap-4 bg-gradient-to-r from-neutral-800 to-neutral-800/50 text-white p-8 rounded-xl transition-all ease-in-out duration-150 hover:-translate-y-1 hover:shadow-xl hover:shadow-neutral-800/50"
             >
               <div className="flex flex-col">
                 <h3 className="text-2xl font-medium">{project.name}</h3>
