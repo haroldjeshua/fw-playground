@@ -17,7 +17,7 @@ const ProjectsPage = async () => {
   console.log(projects);
 
   return (
-    <div className="max-w-3xl my-0 mx-auto py-8 px-0">
+    <section className="max-w-3xl my-0 mx-auto py-8 px-0">
       <h2>Projects</h2>
       <ul>
         {projects.map((project) => (
@@ -45,7 +45,7 @@ const ProjectsPage = async () => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

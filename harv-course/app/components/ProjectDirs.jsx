@@ -11,7 +11,7 @@ async function fetchProjectContents(name) {
   return contents;
 }
 
-const ProjectDir = async ({ name }) => {
+const ProjectDirs = async ({ name }) => {
   const contents = await fetchProjectContents(name);
   const dirs = contents.filter((content) => content.type === "dir");
 
@@ -29,4 +29,4 @@ const ProjectDir = async ({ name }) => {
   );
 };
 
-export default ProjectDir;
+export default ProjectDirs;

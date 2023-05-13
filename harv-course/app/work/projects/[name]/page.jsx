@@ -1,6 +1,7 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import Project from "@/app/components/Project";
-import ProjectDir from "@/app/components/ProjectDir";
+import ProjectDirs from "@/app/components/ProjectDirs";
 
 const ProjectPage = ({ params: { name } }) => {
   return (
@@ -12,8 +13,13 @@ const ProjectPage = ({ params: { name } }) => {
         >
           Back to Projects
         </Link>
-        <Project name={name} />
-        <ProjectDir name={name} />
+        <Suspense fallback={<div>Loading project repo...</div>}>
+          <Project name={name} />
+        </Suspense>
+        <hr className="my-4 border-neutral-600" />
+        <Suspense fallback={<div>Loading project directories... </div>}>
+          <ProjectDirs name={name} />
+        </Suspense>
       </div>
     </div>
   );
