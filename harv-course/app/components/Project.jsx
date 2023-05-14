@@ -3,7 +3,12 @@ import { FiStar, FiGitBranch, FiEye } from "react-icons/fi";
 
 async function fetchProject(name) {
   const response = await fetch(
-    `https://api.github.com/repos/haroldjeshua/${name}`
+    `https://api.github.com/repos/haroldjeshua/${name}`,
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
   );
 
   const project = await response.json();
